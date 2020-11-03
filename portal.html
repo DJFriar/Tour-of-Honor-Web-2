@@ -18,7 +18,17 @@
                 <ul class="uk-navbar-nav">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./photowall.html">Photo Wall</a></li>
-                    <li><a href="#">Rules & FAQ</a></li>
+                    <li>
+                        <a href="#">Rules & FAQ</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">Why We Ride</a></li>
+                                <li><a href="#">Charities</a></li>
+                                <li><a href="./faqs.html">FAQs</a></li>
+                                <li><a href="#">Rules</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <a class="uk-navbar-item uk-logo" href="./index.html"><img src="assets/images/TOH-180.png" width="80" height="80"></a>
@@ -56,6 +66,7 @@
     </nav>
 
     <div uk-grid>
+        <!-- Review Queue -->
         <div class="uk-width-1-4@m uk-padding-small" id="reviewQueue">
             <div class="uk-child-width-1-2@m" uk-grid>
                 <div>
@@ -179,7 +190,7 @@
                         <dt></dt>
                         <dd>
                             <button class="uk-button uk-button-danger">Reject</button>
-                            <button class="uk-button uk-button-primary">Approve</button>
+                            <button class="uk-button uk-button-primary approveButton">Approve</button>
                         </dd>
                     </dl>
                 </div>

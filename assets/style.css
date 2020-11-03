@@ -32,6 +32,10 @@ body {
     border-radius: 16px;
 }
 
+.approveButton {
+    background-color: green;
+}
+
 #reviewQueue {
     margin-left: 40px;
     background-color: #FFDA4780;
@@ -47,4 +51,12 @@ body {
 
 #photoWallSection {
     margin-bottom: 20px;
+}
+
+#faqContent {
+    margin-bottom: 80px;
+}
+
+.dbr-hero-header {
+    background-image: url("./images/hero_tad_scott.jpg");
 }
