@@ -1,0 +1,17 @@
+body {
+    font-family: 'Source Serif Pro', serif;
+}
+
+.uk-navbar-container {
+    background-color: #FFDA47B3 !important;
+    /* opacity: 70%; */
+}
+
+.uk-navbar-nav > li > a {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.25em;
+}
+
+.photoWallCaption {
+    color: white;
+}
