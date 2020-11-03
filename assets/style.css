@@ -2,9 +2,19 @@ body {
     font-family: 'Source Serif Pro', serif;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFDA47B3;
+    color: black;
+    text-align: center;
+}
+
 .uk-navbar-container {
     background-color: #FFDA47B3 !important;
-    /* opacity: 70%; */
+    margin-bottom: 0px;
 }
 
 .uk-navbar-nav > li > a {
@@ -14,4 +24,27 @@ body {
 
 .photoWallCaption {
     color: white;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.uk-card {
+    border-radius: 16px;
+}
+
+#reviewQueue {
+    margin-left: 40px;
+    background-color: #FFDA4780;
+}
+
+#mainReviewArea, #photoWallSection {
+    margin-top: 20px;
+}
+
+#websiteCredit {
+    opacity: 40%;
+}
+
+#photoWallSection {
+    margin-bottom: 20px;
 }

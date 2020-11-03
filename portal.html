@@ -56,32 +56,108 @@
     </nav>
 
     <div uk-grid>
-        <div class="uk-width-1-4@m">
-            <div class="uk-child-width-1-1@m" uk-grid>
+        <div class="uk-width-1-4@m uk-padding-small" id="reviewQueue">
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-hover">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-hover">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <img src="./assets/images/photowall/2018ak7.jpg" alt="">
                         </div>
-                        <div class="uk-card-body">
-                            <p>AK7</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                        <!-- <div class="uk-card-body">
+                            <p>AK7</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
+                        </div>
+                        <!-- <div class="uk-card-body">
+                            <p>AK7</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="uk-width-expand@m">
+        
+        <!-- Main Content Area -->
+        <div class="uk-width-expand@m" id="mainReviewArea">
             <div uk-grid>
                 <div class="uk-width-expand@m">
-                    <div class="uk-child-width-1-1@m" uk-grid>
+                    <div class="uk-child-width-1-@m" uk-grid>
                         <div>
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-media-top">
-                                    <img src="./assets/images/photowall/2018ak4.jpg" alt="">
+                                    <img src="./assets/images/DB127.jpg" alt="">
                                 </div>
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title">AK4</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p> -->
                                 </div>
                             </div>
                         </div>
@@ -97,18 +173,22 @@
                         </dd>
                         <dt>Memorial Info</dt>
                         <dd>
-                            Doughboy DB127
+                            Doughboy DB127<br>
                             Canyon, TX
                         </dd>
                         <dt></dt>
                         <dd>
-                            <button>Reject</button>
-                            <button>Approve</button>
+                            <button class="uk-button uk-button-danger">Reject</button>
+                            <button class="uk-button uk-button-primary">Approve</button>
                         </dd>
                     </dl>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <p><br>&copy; 2010-2020 Tour of Honor, LLC. All rights reserved.<br><span id="websiteCredit">Website design by Pophex</span></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
