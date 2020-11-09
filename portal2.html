@@ -76,16 +76,9 @@
         <div class="uk-width-1-4 " id="reviewQueue" >
             <div class="uk-child-width-1-2 uk-grid-small queueRow" style="height:1040px;overflow: scroll;" uk-grid>
                 <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
+                    <div class="uk-card uk-card-hover uk-card-default" style="border: 2px solid black;">
                         <div class="uk-card-media-top uk-cover-container">
                             <a href="portal2.html"><img src="./assets/images/H246_Tommy.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <a href="portal1.html"><img src="./assets/images/TX006_Tommy.jpeg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +199,56 @@
         
         <!-- Main Approval Area -->
         <div class="uk-width-expand@m" id="mainReviewArea">
-            Choose an image to score.
+            <div uk-grid>
+                <!-- Photo Well -->
+                <div class="uk-width-3-5">
+                    <div class="uk-child-width-1-@m" uk-grid>
+                        <div>
+                            <div class="uk-card">
+                                <div class="uk-card-body uk-padding-small">
+                                    <div><img class="roundedImageCorners" src="./assets/images/H246_Tommy.jpeg"></div>
+                                </div>
+                                <div class="uk-card-badge uk-label warningTag" uk-tooltip="title: Duplicate; pos: bottom">
+                                    <a href="#modal-duplicate" uk-toggle><i class="fas fa-exclamation-triangle dupError"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="approvalButtons">
+                        <button class="uk-button uk-button-danger" uk-toggle="target: #modal-rejection"><i class="far fa-thumbs-down"></i>&nbsp;Reject</button>
+                        <button class="uk-button uk-button-primary approveButton"><i class="far fa-thumbs-up"></i>&nbsp;Approve</button>
+                    </div>
+                </div>
+                <!-- Submission Details -->
+                <div class="uk-width-2-5@m">
+                    <dl class="uk-description-list uk-description-list-divider">
+                        <dt>Tag Info</dt>
+                        <dd>
+                            <div class="uk-label catTag">Huey</div>
+                            <div class="uk-label idTag">H246</div>
+                            <div class="uk-label stateTag">Texas</div>
+                        </dd>
+                        <dt>Sample Image</dt>
+                        <dd>
+                            <img id="sampleImage" src="./assets/images/H246.jpg" height="300px">
+                        </dd>
+                        <dt>Rider Info&nbsp;&nbsp;<span class="uk-label flagTag">713</span></dt>
+                        <dd>
+                            Tommy Craft<br>
+                            2018 Honda Gold Wing<br>
+                            Allen, TX
+                        </dd>
+                        <dt>Photo Info</dt>
+                        <dd>
+                            <span class="fas fa-clock fa-fw"></span>Captured: 19 May 2020 @ 2106<br>
+                            <a class="uk-link-reset" href="https://www.google.com/maps/@?api=1&map_action=map&zoom=20&basemap=satellite&center=32.543903,-95.862417" target="_blank"><span class="fas fa-map-marker-alt fa-fw"></span>Lat: 32.543903 / Lon: -95.862417<br></a>
+                            <div class="mapBox">
+                                <div id="map"></div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -218,8 +260,8 @@
                 <h2 class="uk-modal-title">Duplicate Resolver</h2>
             </div>
                 <div class="uk-child-width-1-2 uk-padding-small" uk-grid>
-                    <div>Existing<img class="uk-border-rounded" src="./assets/images/DB127_Tommy.jpeg"></div>
-                    <div>New<img class="uk-border-rounded" src="./assets/images/DB127.jpg"></div>
+                    <div>Existing<img class="uk-border-rounded" src="./assets/images/H246_Tommy.jpeg"></div>
+                    <div>New<img class="uk-border-rounded" src="./assets/images/H246_Tommy.jpeg"></div>
                 </div>
             <p class="uk-text-right">
                 <button class="uk-button uk-button-default uk-modal-close" type="button">Keep Existing</button>
@@ -257,5 +299,26 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
+    <script>
+        mapkit.init({
+            authorizationCallback: function(done) {
+                done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0VUo2Mks1V1EifQ.eyJpc3MiOiI4WEhZN0VRN1RFIiwiaWF0IjoxNjA0ODgwODczLCJleHAiOjE2MzE2NjQ4NzN9.lB16PGBWkiQpDrjSuDjpqhTbKPoHAcuzd03Lcjrvt-wS_x2aHBC4R3m58plMQ0l0TwLcB8Ujv-JyWBqhZdmOuA');
+            }
+        });
+
+        var MarkerAnnotation = mapkit.MarkerAnnotation
+        var photoCoords = new mapkit.Coordinate(32.543903, -95.862417)
+
+        var demoRegion = new mapkit.CoordinateRegion(
+            new mapkit.Coordinate(32.543903, -95.862417),
+            new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+        );
+        var map = new mapkit.Map("map");
+
+        var locationAnnotation = new MarkerAnnotation(photoCoords, { color: "#ffff00", title: "H246", glyphText: "📷" });
+        map.showItems([locationAnnotation]);
+
+        map.region = demoRegion;
+    </script>
 </body>
 </html>
