@@ -105,28 +105,6 @@ body {
   margin-bottom: 80px;
 }
 
-.dbr-hero-header {
-  /* background-image: url("./images/hero_tad_scott.jpg"); */
-  height: 350px;
-  width: 100vw;
-  object-fit: cover;
-}
-
-#background {
-  width: 100%; 
-  height: 25%; 
-  position: absolute; 
-  left: 0px; 
-  top: 80px; 
-  z-index: 0;
-}
-
-.stretch {
-  object-fit: cover;
-  width:100%;
-  height:100%;
-}
-
 .flagTag {
   background-color: yellow;
   color: black;
