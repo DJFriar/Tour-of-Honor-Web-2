@@ -12,7 +12,16 @@ body {
   text-align: center;
 }
 
-.uk-navbar-container {
+.mainPageContent {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.dateBar > p {
+  padding: 6px 0px 4px 24px;
+}
+
+.uk-navbar-container, .dateBar {
   background-color: #ffe684 !important; /* #ffda47b3 */
   margin-bottom: 0px;
 }

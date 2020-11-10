@@ -1,3 +1,8 @@
+var todayIs = moment().format("dddd, MMMM Do, YYYY");
+
+// Populate the date
+$("#todayIs").text(todayIs);
+
 // Google Maps Support
 // let map;
 
