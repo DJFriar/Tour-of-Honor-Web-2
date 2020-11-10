@@ -29,67 +29,69 @@
   </head>
   <body>
     <!-- Navbar Section -->
-    <nav class="uk-navbar-container uk-margin" uk-navbar>
-      <div class="uk-navbar-center">
-        <div class="uk-navbar-left">
-          <a href="" class="uk-navbar-item uk-logo"></a>
-          <ul class="uk-navbar-nav">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./photowall.html">Photo Wall</a></li>
-            <li>
-              <a href="#">Rules & FAQ</a>
-              <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li><a href="./whyweride.html">Why We Ride</a></li>
-                  <li><a href="#">Charities</a></li>
-                  <li><a href="./faqs.html">FAQs</a></li>
-                  <li><a href="./rules.html">Rules</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+      <nav class="uk-navbar-container uk-margin" uk-navbar>
+        <div class="uk-navbar-center">
+          <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo"></a>
+            <ul class="uk-navbar-nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./photowall.html">Photo Wall</a></li>
+              <li>
+                <a href="#">Rules & FAQ</a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="./whyweride.html">Why We Ride</a></li>
+                    <li><a href="#">Charities</a></li>
+                    <li><a href="./faqs.html">FAQs</a></li>
+                    <li><a href="./rules.html">Rules</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="uk-navbar-item uk-logo" href="./index.html"
+            ><img
+              src="assets/images/TOH-180.png"
+              width="80"
+              height="80"
+              alt="Tour of Honor Logo"
+          /></a>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="#">Rides</a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="#">State Memorials</a></li>
+                    <li><a href="#">Lost Generation</a></li>
+                    <li><a href="#">War Dogs</a></li>
+                    <li><a href="#">Huey Helicopters</a></li>
+                    <li><a href="#">Gold Star Families</a></li>
+                    <li><a href="#">Sea to Shining Sea</a></li>
+                    <li><a href="#">National Parks</a></li>
+                    <li><a href="#">Advanced Rides</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="https://shop.tourofhonor.com">TOH Store</a></li>
+              <li class="uk-active">
+                <a href="#">Tools</a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="#">Ad Manager</a></li>
+                    <li><a href="#">Rider Manager</a></li>
+                    <li class="uk-active">
+                      <a href="./portal.html">Scoring Portal</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <a class="uk-navbar-item uk-logo" href="./index.html"
-          ><img
-            src="assets/images/TOH-180.png"
-            width="80"
-            height="80"
-            alt="Tour of Honor Logo"
-        /></a>
-        <div class="uk-navbar-right">
-          <ul class="uk-navbar-nav">
-            <li>
-              <a href="#">Rides</a>
-              <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li><a href="#">State Memorials</a></li>
-                  <li><a href="#">Lost Generation</a></li>
-                  <li><a href="#">War Dogs</a></li>
-                  <li><a href="#">Huey Helicopters</a></li>
-                  <li><a href="#">Gold Star Families</a></li>
-                  <li><a href="#">Sea to Shining Sea</a></li>
-                  <li><a href="#">National Parks</a></li>
-                  <li><a href="#">Advanced Rides</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a href="https://shop.tourofhonor.com">TOH Store</a></li>
-            <li class="uk-active">
-              <a href="#">Tools</a>
-              <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li><a href="#">Ad Manager</a></li>
-                  <li><a href="#">Rider Manager</a></li>
-                  <li class="uk-active">
-                    <a href="./portal.html">Scoring Portal</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <div uk-grid>
       <!-- Review Queue -->

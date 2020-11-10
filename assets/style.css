@@ -15,10 +15,20 @@ body {
 .mainPageContent {
   margin-left: 24px;
   margin-right: 24px;
+  
+}
+
+.allPageContent {
+  margin-bottom: 100px;
 }
 
 .dateBar > p {
   padding: 6px 0px 4px 24px;
+}
+
+.adArea {
+  text-align: center;
+  padding-right: 10px;
 }
 
 .uk-navbar-container, .dateBar {
