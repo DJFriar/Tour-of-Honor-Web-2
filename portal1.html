@@ -1,305 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>TOH - Scoring Portal</title>
 
-    <script src="https://kit.fontawesome.com/ade5c7beee.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ade5c7beee.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgVddfKJkFJxkIGL26i2m0NgB2ADAmGoE&callback=initMap&libraries=&v=weekly" defer></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgVddfKJkFJxkIGL26i2m0NgB2ADAmGoE&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
     <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
     <!-- Navbar Section -->
     <nav class="uk-navbar-container uk-margin" uk-navbar>
-        <div class="uk-navbar-center">
-            <div class="uk-navbar-left">
-                <a href="" class="uk-navbar-item uk-logo"></a>
-                <ul class="uk-navbar-nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./photowall.html">Photo Wall</a></li>
-                    <li>
-                        <a href="#">Rules & FAQ</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="./whyweride.html">Why We Ride</a></li>
-                                <li><a href="#">Charities</a></li>
-                                <li><a href="./faqs.html">FAQs</a></li>
-                                <li><a href="./rules.html">Rules</a></li>
-                            </ul>
-                        </div>
-                    </li>
+      <div class="uk-navbar-center">
+        <div class="uk-navbar-left">
+          <a href="" class="uk-navbar-item uk-logo"></a>
+          <ul class="uk-navbar-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./photowall.html">Photo Wall</a></li>
+            <li>
+              <a href="#">Rules & FAQ</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="./whyweride.html">Why We Ride</a></li>
+                  <li><a href="#">Charities</a></li>
+                  <li><a href="./faqs.html">FAQs</a></li>
+                  <li><a href="./rules.html">Rules</a></li>
                 </ul>
-            </div>
-            <a class="uk-navbar-item uk-logo" href="./index.html"><img src="assets/images/TOH-180.png" width="80" height="80"></a>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href="#">Rides</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="#">State Memorials</a></li>
-                                <li><a href="#">Lost Generation</a></li>
-                                <li><a href="#">War Dogs</a></li>
-                                <li><a href="#">Huey Helicopters</a></li>
-                                <li><a href="#">Gold Star Families</a></li>
-                                <li><a href="#">Sea to Shining Sea</a></li>
-                                <li><a href="#">National Parks</a></li>
-                                <li><a href="#">Advanced Rides</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="https://shop.tourofhonor.com">TOH Store</a></li>
-                    <li class="uk-active">
-                        <a href="#">Tools</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="#">Ad Manager</a></li>
-                                <li><a href="#">Rider Manager</a></li>
-                                <li class="uk-active"><a href="./portal.html">Scoring Portal</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+              </div>
+            </li>
+          </ul>
         </div>
+        <a class="uk-navbar-item uk-logo" href="./index.html"
+          ><img
+            src="assets/images/TOH-180.png"
+            width="80"
+            height="80"
+            alt="Tour of Honor Logo"
+        /></a>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="#">Rides</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#">State Memorials</a></li>
+                  <li><a href="#">Lost Generation</a></li>
+                  <li><a href="#">War Dogs</a></li>
+                  <li><a href="#">Huey Helicopters</a></li>
+                  <li><a href="#">Gold Star Families</a></li>
+                  <li><a href="#">Sea to Shining Sea</a></li>
+                  <li><a href="#">National Parks</a></li>
+                  <li><a href="#">Advanced Rides</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="https://shop.tourofhonor.com">TOH Store</a></li>
+            <li class="uk-active">
+              <a href="#">Tools</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><a href="#">Ad Manager</a></li>
+                  <li><a href="#">Rider Manager</a></li>
+                  <li class="uk-active">
+                    <a href="./portal.html">Scoring Portal</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div uk-grid>
-        <!-- Review Queue -->
-        <div class="uk-width-1-4 " id="reviewQueue" >
-            <div class="uk-child-width-1-2 uk-grid-small queueRow" style="height:1040px;overflow: scroll;" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top uk-cover-container">
-                            <a href="portal2.html"><img src="./assets/images/H246_Tommy.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default" style="border: 2px solid black;">
-                        <div class="uk-card-media-top">
-                            <a href="portal1.html"><img src="./assets/images/TX006_Tommy.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018al7.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018al2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018al1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018al6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ar7.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ar4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ar2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ar5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ar1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018al3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak7.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="./assets/images/photowall/2018ak4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+      <!-- Review Queue -->
+      <div class="uk-width-1-4" id="reviewQueue">
+        <div
+          class="uk-child-width-1-2 uk-grid-small queueRow"
+          style="height: 1040px; overflow: scroll"
+          uk-grid
+        >
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top uk-cover-container">
+                <a href="portal2.html"
+                  ><img src="./assets/images/H246_Tommy.jpeg" alt=""
+                /></a>
+              </div>
             </div>
+          </div>
+          <div>
+            <div
+              class="uk-card uk-card-hover uk-card-default"
+              style="border: 2px solid black"
+            >
+              <div class="uk-card-media-top">
+                <a href="portal1.html"
+                  ><img src="./assets/images/TX006_Tommy.jpeg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018al7.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018al2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018al1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018al6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ar7.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ar4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ar2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ar5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ar1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018al3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak7.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak7.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-hover uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./assets/images/photowall/2018ak4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Main Approval Area -->
-        <div class="uk-width-expand@m" id="mainReviewArea">
-            <div uk-grid>
-                <!-- Photo Well -->
-                <div class="uk-width-3-5">
-                    <div class="uk-child-width-1-@m" uk-grid>
-                        <div>
-                            <div class="uk-card">
-                                <div class="uk-card-body uk-padding-small">
-                                    <div><img class="roundedImageCorners" src="./assets/images/TX006_Tommy.jpeg"></div>
-                                </div>
-                                <!-- <div class="uk-card-badge uk-label warningTag" uk-tooltip="title: Duplicate; pos: bottom">
+      </div>
+
+      <!-- Main Approval Area -->
+      <div class="uk-width-expand@m" id="mainReviewArea">
+        <div uk-grid>
+          <!-- Photo Well -->
+          <div class="uk-width-3-5">
+            <div class="uk-child-width-1-@m" uk-grid>
+              <div>
+                <div class="uk-card">
+                  <div class="uk-card-body uk-padding-small">
+                    <div>
+                      <img
+                        class="roundedImageCorners"
+                        src="./assets/images/TX006_Tommy.jpeg"
+                        alt="TX006"
+                      />
+                    </div>
+                  </div>
+                  <!-- <div class="uk-card-badge uk-label warningTag" uk-tooltip="title: Duplicate; pos: bottom">
                                     <a href="#modal-duplicate" uk-toggle><i class="fas fa-exclamation-triangle dupError"></i></a>
                                 </div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div id="approvalButtons">
-                        <button class="uk-button uk-button-danger" uk-toggle="target: #modal-rejection"><i class="far fa-thumbs-down"></i>&nbsp;Reject</button>
-                        <a href="portal2.html"><button class="uk-button uk-button-primary approveButton"><i class="far fa-thumbs-up"></i>&nbsp;Approve</button></a>
-                    </div>
                 </div>
-                <!-- Submission Details -->
-                <div class="uk-width-2-5@m">
-                    <dl class="uk-description-list uk-description-list-divider">
-                        <dt>Tag Info</dt>
-                        <dd>
-                            <div class="uk-label catTag">TOH</div>
-                            <div class="uk-label idTag">TX006</div>
-                            <div class="uk-label stateTag">Texas</div>
-                        </dd>
-                        <dt>Sample Image</dt>
-                        <dd>
-                            <img id="sampleImage" src="./assets/images/TX006.jpg">
-                        </dd>
-                        <dt>Rider Info&nbsp;&nbsp;<span class="uk-label flagTag">713</span></dt>
-                        <dd>
-                            Tommy Craft<br>
-                            2018 Honda Gold Wing<br>
-                            Allen, TX
-                        </dd>
-                        <dt>Photo Info</dt>
-                        <dd>
-                            <span class="fas fa-clock fa-fw"></span>Captured: 30 May 2020 @ 1408<br>
-                            <a class="uk-link-reset" href="https://www.google.com/maps/@?api=1&map_action=map&zoom=20&basemap=satellite&center=33.639588,-95.523926" target="_blank"><span class="fas fa-map-marker-alt fa-fw"></span>Lat: 33.639588 / Lon: -95.523926<br></a>
-                            <div class="mapBox">
-                                <div id="map"></div>
-                            </div>
-                        </dd>
-                    </dl>
-                </div>
+              </div>
             </div>
+            <div id="approvalButtons">
+              <button
+                class="uk-button uk-button-danger"
+                uk-toggle="target: #modal-rejection"
+              >
+                <i class="far fa-thumbs-down"></i>&nbsp; Reject
+              </button>
+              <a href="portal2.html"
+                ><button class="uk-button uk-button-primary approveButton">
+                  <i class="far fa-thumbs-up"></i>&nbsp; Approve
+                </button></a
+              >
+            </div>
+          </div>
+          <!-- Submission Details -->
+          <div class="uk-width-2-5@m">
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt>Tag Info</dt>
+              <dd>
+                <div class="uk-label catTag">TOH</div>
+                <div class="uk-label idTag">TX006</div>
+                <div class="uk-label stateTag">Texas</div>
+              </dd>
+              <dt>Sample Image</dt>
+              <dd>
+                <img
+                  id="sampleImage"
+                  src="./assets/images/TX006.jpg"
+                  alt="TX006"
+                />
+              </dd>
+              <dt>
+                Rider Info&nbsp;&nbsp;<span class="uk-label flagTag">713</span>
+              </dt>
+              <dd>
+                Tommy Craft<br />
+                2018 Honda Gold Wing<br />
+                Allen, TX
+              </dd>
+              <dt>Photo Info</dt>
+              <dd>
+                <span class="fas fa-clock fa-fw"></span>Captured: 30 May 2020 @
+                1408<br />
+                <a
+                  class="uk-link-reset"
+                  href="https://www.google.com/maps/@?api=1&map_action=map&zoom=20&basemap=satellite&center=33.639588,-95.523926"
+                  target="_blank"
+                  ><span class="fas fa-map-marker-alt fa-fw"></span>Lat:
+                  33.639588 / Lon: -95.523926<br
+                /></a>
+                <div class="mapBox">
+                  <div id="map"></div>
+                </div>
+              </dd>
+            </dl>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- This is the modal for duplicates -->
     <div id="modal-duplicate" class="uk-modal-container" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Duplicate Resolver</h2>
-            </div>
-                <div class="uk-child-width-1-2 uk-padding-small" uk-grid>
-                    <div>Existing<img class="uk-border-rounded" src="./assets/images/DB127_Tommy.jpeg"></div>
-                    <div>New<img class="uk-border-rounded" src="./assets/images/DB127.jpg"></div>
-                </div>
-            <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="button">Keep Existing</button>
-                <button class="uk-button uk-button-primary uk-modal-close" type="button">Accept New</button>
-            </p>
+      <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Duplicate Resolver</h2>
         </div>
+        <div class="uk-child-width-1-2 uk-padding-small" uk-grid>
+          <div>
+            Existing<img
+              class="uk-border-rounded"
+              src="./assets/images/DB127_Tommy.jpeg"
+              alt="DB127"
+            />
+          </div>
+          <div>
+            New<img
+              class="uk-border-rounded"
+              src="./assets/images/DB127.jpg"
+              alt="DB127"
+            />
+          </div>
+        </div>
+        <p class="uk-text-right">
+          <button
+            class="uk-button uk-button-default uk-modal-close"
+            type="button"
+          >
+            Keep Existing
+          </button>
+          <button
+            class="uk-button uk-button-primary uk-modal-close"
+            type="button"
+          >
+            Accept New
+          </button>
+        </p>
+      </div>
     </div>
 
     <!-- This is the modal for rejecting an image -->
     <div id="modal-rejection" class="uk-modal-container" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Reject Image</h2>
-            </div>
-                <div class="uk-child-width-1-1" uk-grid>
-                    <form>
-                        <div class="uk-margin-large">
-                            <textarea class="uk-textarea" rows="5" placeholder="Enter reason for rejection here."></textarea>
-                        </div>
-                    </form>
-                </div>
-            <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-danger uk-modal-close" type="button">Notify Tommy</button>
-            </p>
+      <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Reject Image</h2>
         </div>
+        <div class="uk-child-width-1-1" uk-grid>
+          <form>
+            <div class="uk-margin-large">
+              <textarea
+                class="uk-textarea"
+                rows="5"
+                placeholder="Enter reason for rejection here."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <p class="uk-text-right">
+          <button
+            class="uk-button uk-button-default uk-modal-close"
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            class="uk-button uk-button-danger uk-modal-close"
+            type="button"
+          >
+            Notify Tommy
+          </button>
+        </p>
+      </div>
     </div>
 
     <div class="footer">
-        <p><br>&copy; 2010-2020 Tour of Honor, LLC. All rights reserved.<br><span id="websiteCredit">Website design by Pophex</span></p>
+      <p>
+        <br />&copy; 2010-2020 Tour of Honor, LLC. All rights reserved.<br /><span
+          id="websiteCredit"
+          >Website design by Pophex</span
+        >
+      </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
@@ -307,25 +421,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
     <script>
-        mapkit.init({
-            authorizationCallback: function(done) {
-                done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0VUo2Mks1V1EifQ.eyJpc3MiOiI4WEhZN0VRN1RFIiwiaWF0IjoxNjA0ODgwODczLCJleHAiOjE2MzE2NjQ4NzN9.lB16PGBWkiQpDrjSuDjpqhTbKPoHAcuzd03Lcjrvt-wS_x2aHBC4R3m58plMQ0l0TwLcB8Ujv-JyWBqhZdmOuA');
-            }
-        });
+      mapkit.init({
+        authorizationCallback: function (done) {
+          done(
+            "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0VUo2Mks1V1EifQ.eyJpc3MiOiI4WEhZN0VRN1RFIiwiaWF0IjoxNjA0ODgwODczLCJleHAiOjE2MzE2NjQ4NzN9.lB16PGBWkiQpDrjSuDjpqhTbKPoHAcuzd03Lcjrvt-wS_x2aHBC4R3m58plMQ0l0TwLcB8Ujv-JyWBqhZdmOuA"
+          );
+        },
+      });
 
-        var MarkerAnnotation = mapkit.MarkerAnnotation
-        var photoCoords = new mapkit.Coordinate(33.639588, -95.523926)
+      var MarkerAnnotation = mapkit.MarkerAnnotation;
+      var photoCoords = new mapkit.Coordinate(33.639588, -95.523926);
 
-        var demoRegion = new mapkit.CoordinateRegion(
-            new mapkit.Coordinate(33.639588, -95.523926),
-            new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-        );
-        var map = new mapkit.Map("map");
+      var demoRegion = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(33.639588, -95.523926),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+      var map = new mapkit.Map("map");
 
-        var locationAnnotation = new MarkerAnnotation(photoCoords, { color: "#ffff00", title: "TX006", glyphText: "📷" });
-        map.showItems([locationAnnotation]);
+      var locationAnnotation = new MarkerAnnotation(photoCoords, {
+        color: "#ffff00",
+        title: "TX006",
+        glyphText: "📷",
+      });
+      map.showItems([locationAnnotation]);
 
-        map.region = demoRegion;
+      map.region = demoRegion;
     </script>
-</body>
+  </body>
 </html>
